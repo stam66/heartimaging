@@ -133,7 +133,7 @@ Begin WebPage wp_LandingPage
       _ProtectImage   =   False
    End
    Begin WebLabel lblInfo
-      Bold            =   False
+      Bold            =   True
       ControlID       =   ""
       CSSClasses      =   ""
       Enabled         =   True
@@ -160,7 +160,7 @@ Begin WebPage wp_LandingPage
       TextAlignment   =   1
       TextColor       =   &c000000FF
       Tooltip         =   ""
-      Top             =   455
+      Top             =   420
       Underline       =   False
       Visible         =   True
       Width           =   471
@@ -168,7 +168,7 @@ Begin WebPage wp_LandingPage
    End
    Begin WebLink lblEchoIndicationsLink
       Appearance      =   0
-      Bold            =   True
+      Bold            =   False
       ControlID       =   ""
       CSSClasses      =   ""
       Enabled         =   True
@@ -178,7 +178,7 @@ Begin WebPage wp_LandingPage
       Index           =   -2147483648
       Indicator       =   ""
       Italic          =   False
-      Left            =   330
+      Left            =   346
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -196,7 +196,7 @@ Begin WebPage wp_LandingPage
       TextAlignment   =   0
       TextColor       =   &c006AB500
       Tooltip         =   ""
-      Top             =   462
+      Top             =   427
       Underline       =   False
       URL             =   "https://echoindications.org"
       Visible         =   True
@@ -215,12 +215,12 @@ Begin WebPage wp_LandingPage
       Indicator       =   ""
       Italic          =   False
       Left            =   66
-      LockBottom      =   False
+      LockBottom      =   True
       LockedInPosition=   False
       LockHorizontal  =   False
       LockLeft        =   True
-      LockRight       =   False
-      LockTop         =   True
+      LockRight       =   True
+      LockTop         =   False
       LockVertical    =   False
       Multiline       =   False
       PanelIndex      =   0
@@ -231,7 +231,7 @@ Begin WebPage wp_LandingPage
       TextAlignment   =   1
       TextColor       =   &c000000FF
       Tooltip         =   ""
-      Top             =   522
+      Top             =   736
       Underline       =   False
       Visible         =   True
       Width           =   704
@@ -295,6 +295,7 @@ Begin WebPage wp_LandingPage
          Parent          =   "Rectangle2"
          Scope           =   0
          TabIndex        =   7
+         TabPanelIndex   =   0
          TabStop         =   True
          Text            =   "Dr S Kapetanakis, 2025"
          TextAlignment   =   2
@@ -307,12 +308,53 @@ Begin WebPage wp_LandingPage
          _mPanelIndex    =   -1
       End
    End
+   Begin WebLabel lblInfo
+      Bold            =   False
+      ControlID       =   ""
+      CSSClasses      =   ""
+      Enabled         =   True
+      FontName        =   ""
+      FontSize        =   0.0
+      Height          =   264
+      Index           =   2
+      Indicator       =   ""
+      Italic          =   False
+      Left            =   66
+      LockBottom      =   True
+      LockedInPosition=   False
+      LockHorizontal  =   False
+      LockLeft        =   True
+      LockRight       =   True
+      LockTop         =   True
+      LockVertical    =   False
+      Multiline       =   True
+      PanelIndex      =   0
+      Scope           =   0
+      TabIndex        =   8
+      TabStop         =   True
+      Text            =   "The ECHOindications web app has been updated to version 1.5, which brings many improvements:\n\n- Migration to MySQL backend database on dedicated VPS\n- The web app has been update for better UI/UX\n- Fuzzy search to manage spelling errors, with Levenshtein distance proportional to string length to avoid false positives\n- Searching includes all relevant fields; keywords include synonyms to make finding the correct indication easier\n- Double clicking list entries shows a dialog instead of loading a new page to show details of the list item\n- Login as admin from any screen\n- Full audit of all database CRUD operations\n- List of indications expanded - all new indications marked with a 'new' context\n- All existing issues have been migrated to the new version and are being addressed\n\nand more..."
+      TextAlignment   =   1
+      TextColor       =   &c000000FF
+      Tooltip         =   ""
+      Top             =   480
+      Underline       =   False
+      Visible         =   True
+      Width           =   879
+      _mPanelIndex    =   -1
+   End
 End
 #tag EndWebPage
 
 #tag WindowCode
 #tag EndWindowCode
 
+#tag Events lblInfo
+	#tag Event
+		Sub Opening(index as Integer)
+		  Me.ExecuteJavaScript("this.style.lineHeight = '5.5';")
+		End Sub
+	#tag EndEvent
+#tag EndEvents
 #tag ViewBehavior
 	#tag ViewProperty
 		Name="PanelIndex"
