@@ -6,7 +6,7 @@ Begin WebPage wp_LandingPage
    ControlID       =   ""
    CSSClasses      =   ""
    Enabled         =   False
-   Height          =   812
+   Height          =   908
    ImplicitInstance=   True
    Index           =   -2147483648
    Indicator       =   0
@@ -20,20 +20,20 @@ Begin WebPage wp_LandingPage
    LockRight       =   False
    LockTop         =   True
    LockVertical    =   False
-   MinimumHeight   =   400
-   MinimumWidth    =   600
+   MinimumHeight   =   900
+   MinimumWidth    =   1050
    PanelIndex      =   0
    ScaleFactor     =   0.0
    TabIndex        =   0
    Title           =   "heartimaging.org"
    Top             =   0
    Visible         =   True
-   Width           =   1092
+   Width           =   1138
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
    _mPanelIndex    =   -1
-   Begin WebRectangle Rectangle1
+   Begin WebRectangle rectHeroPanel
       BorderColor     =   &c000000FF
       BorderThickness =   0
       ControlCount    =   0
@@ -63,12 +63,12 @@ Begin WebPage wp_LandingPage
       Tooltip         =   ""
       Top             =   0
       Visible         =   True
-      Width           =   1092
+      Width           =   1138
       _mDesignHeight  =   0
       _mDesignWidth   =   0
       _mPanelIndex    =   -1
    End
-   Begin WebLabel Label1
+   Begin WebLabel lblSiteName
       Bold            =   True
       ControlID       =   ""
       CSSClasses      =   ""
@@ -99,10 +99,10 @@ Begin WebPage wp_LandingPage
       Top             =   104
       Underline       =   False
       Visible         =   True
-      Width           =   776
+      Width           =   822
       _mPanelIndex    =   -1
    End
-   Begin WebImageViewer imgLogo
+   Begin WebImageViewer imgSiteLogo
       ControlID       =   ""
       CSSClasses      =   ""
       DisplayMode     =   3
@@ -156,14 +156,14 @@ Begin WebPage wp_LandingPage
       Scope           =   0
       TabIndex        =   2
       TabStop         =   True
-      Text            =   "Looking for appropriate use criteria for Echocardiography? \nThis has moved to a dedicated site:"
+      Text            =   "Looking for appropriate use criteria for Echocardiography? \nThis has moved to a dedicated site, ECHOindications is now available at    ⮕  "
       TextAlignment   =   1
       TextColor       =   &c000000FF
       Tooltip         =   ""
       Top             =   420
       Underline       =   False
       Visible         =   True
-      Width           =   471
+      Width           =   925
       _mPanelIndex    =   -1
    End
    Begin WebLink lblEchoIndicationsLink
@@ -173,12 +173,12 @@ Begin WebPage wp_LandingPage
       CSSClasses      =   ""
       Enabled         =   True
       FontName        =   ""
-      FontSize        =   0.0
+      FontSize        =   22.0
       Height          =   38
       Index           =   -2147483648
       Indicator       =   ""
       Italic          =   False
-      Left            =   346
+      Left            =   655
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -192,15 +192,15 @@ Begin WebPage wp_LandingPage
       TabIndex        =   3
       TabStop         =   True
       Target          =   2
-      Text            =   "https://echoindications.org"
+      Text            =   "echoindications.org"
       TextAlignment   =   0
       TextColor       =   &c006AB500
       Tooltip         =   ""
-      Top             =   427
+      Top             =   434
       Underline       =   False
       URL             =   "https://echoindications.org"
       Visible         =   True
-      Width           =   280
+      Width           =   235
       _mPanelIndex    =   -1
    End
    Begin WebLabel lblInfo
@@ -231,10 +231,10 @@ Begin WebPage wp_LandingPage
       TextAlignment   =   1
       TextColor       =   &c000000FF
       Tooltip         =   ""
-      Top             =   736
+      Top             =   832
       Underline       =   False
       Visible         =   True
-      Width           =   704
+      Width           =   750
       _mPanelIndex    =   -1
    End
    Begin WebRectangle Rectangle2
@@ -265,13 +265,13 @@ Begin WebPage wp_LandingPage
       TabIndex        =   6
       TabStop         =   True
       Tooltip         =   ""
-      Top             =   782
+      Top             =   878
       Visible         =   True
-      Width           =   1092
+      Width           =   1138
       _mDesignHeight  =   0
       _mDesignWidth   =   0
       _mPanelIndex    =   -1
-      Begin WebLabel Label2
+      Begin WebLabel lblCopyright
          Bold            =   False
          ControlID       =   ""
          CSSClasses      =   ""
@@ -301,10 +301,10 @@ Begin WebPage wp_LandingPage
          TextAlignment   =   2
          TextColor       =   &cFFFFFF00
          Tooltip         =   ""
-         Top             =   789
+         Top             =   885
          Underline       =   False
          Visible         =   True
-         Width           =   1052
+         Width           =   1098
          _mPanelIndex    =   -1
       End
    End
@@ -315,7 +315,7 @@ Begin WebPage wp_LandingPage
       Enabled         =   True
       FontName        =   ""
       FontSize        =   0.0
-      Height          =   264
+      Height          =   331
       Index           =   2
       Indicator       =   ""
       Italic          =   False
@@ -332,14 +332,14 @@ Begin WebPage wp_LandingPage
       Scope           =   0
       TabIndex        =   8
       TabStop         =   True
-      Text            =   "The ECHOindications web app has been updated to version 1.5, which brings many improvements:\n\n- Migration to MySQL backend database on dedicated VPS\n- The web app has been update for better UI/UX\n- Fuzzy search to manage spelling errors, with Levenshtein distance proportional to string length to avoid false positives\n- Searching includes all relevant fields; keywords include synonyms to make finding the correct indication easier\n- Double clicking list entries shows a dialog instead of loading a new page to show details of the list item\n- Login as admin from any screen\n- Full audit of all database CRUD operations\n- List of indications expanded - all new indications marked with a 'new' context\n- All existing issues have been migrated to the new version and are being addressed\n\nand more..."
+      Text            =   "The ECHOindications web app has been updated to version 1.5, which brings many improvements, including:\n\n- Migration to MySQL backend database on dedicated VPS\n- The web app has been update for better UI/UX\n- Fuzzy search to manage spelling errors, with Levenshtein distance proportional to string length to avoid false positives\n- Searching includes all relevant fields; keywords include synonyms to make finding the correct indication easier\n- Double clicking list entries shows a dialog instead of loading a new page to show details of the list item\n- Login as admin from any screen\n- Full audit of all database CRUD operations\n- List of indications expanded - all new indications marked with a 'new' context\n- All existing issues have been migrated to the new version and are being addressed"
       TextAlignment   =   1
       TextColor       =   &c000000FF
       Tooltip         =   ""
-      Top             =   480
+      Top             =   509
       Underline       =   False
       Visible         =   True
-      Width           =   879
+      Width           =   925
       _mPanelIndex    =   -1
    End
 End
@@ -351,7 +351,12 @@ End
 #tag Events lblInfo
 	#tag Event
 		Sub Opening(index as Integer)
-		  Me.ExecuteJavaScript("this.style.lineHeight = '5.5';")
+		  Dim js As String
+		  js = "var el = document.getElementById('" + Me.ControlID + "');" + _
+		  "if (el) { el.style.lineHeight = '1.5'; console.log('Applied to:', el); }"
+		  Me.ExecuteJavaScript(js)
+		  
+		  me.Style.Value("white-space") = "pre"
 		End Sub
 	#tag EndEvent
 #tag EndEvents
